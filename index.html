@@ -115,7 +115,23 @@ tbody td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--rule
 .src a{color:var(--teal);text-decoration:underline}
 .pfoot{background:var(--navy);color:rgba(255,255,255,.5);padding:22px 64px;font-size:11.5px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .pfoot strong{color:rgba(255,255,255,.85)}
-@media(max-width:768px){.cover{padding:36px 24px}.cm{grid-template-columns:1fr 1fr}.ph{padding:28px 24px 24px}.pb{padding:32px 24px 40px}.pfoot{padding:18px 24px}.two,.three{grid-template-columns:1fr}}
+.dl-bar{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.dl-lbl{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px}
+.dl-grid{display:flex;gap:10px;flex-wrap:wrap}
+.dl-btn{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:10px 16px;text-decoration:none;color:#fff;font-size:12.5px;font-weight:600;font-family:var(--f);transition:background .15s,border-color .15s;cursor:pointer}
+.dl-btn:hover,.dl-btn:focus{background:rgba(255,255,255,.16);border-color:#4FC3F7;outline:none;color:#fff}
+.dl-btn svg{flex-shrink:0;opacity:.8}
+.dl-btn .dl-meta{display:flex;flex-direction:column;line-height:1.3}
+.dl-btn .dl-title{font-size:12.5px;font-weight:700;color:#fff}
+.dl-btn .dl-sub{font-size:10.5px;color:rgba(255,255,255,.55);font-weight:500}
+.dl-inline{display:flex;align-items:center;gap:14px;background:var(--tl);border:1px solid var(--rule);border-radius:8px;padding:14px 18px;margin:0 0 28px;flex-wrap:wrap}
+.dl-inline.g{background:var(--gl);border-color:#A7F3D0}
+.dl-inline-text{flex:1;min-width:200px;font-size:13.5px;color:var(--mid);line-height:1.5}
+.dl-inline-text strong{color:var(--navy);display:block;margin-bottom:2px;font-size:14px}
+.dl-link{display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:8px 14px;border-radius:5px;white-space:nowrap;transition:background .15s;flex-shrink:0}
+.dl-link:hover,.dl-link:focus{background:var(--teal);color:#fff;outline:none}
+.dl-link.g{background:var(--green)}.dl-link.g:hover,.dl-link.g:focus{background:#047857}
+@media(max-width:768px){.cover{padding:36px 24px}.cm{grid-template-columns:1fr 1fr}.ph{padding:28px 24px 24px}.pb{padding:32px 24px 40px}.pfoot{padding:18px 24px}.two,.three{grid-template-columns:1fr}.dl-grid{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -152,6 +168,19 @@ tbody td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--rule
 <button class="tb" onclick="go(3)"><span class="tn">Section 3</span><span class="tla">Learning Without Barriers</span></button>
 <button class="tb" onclick="go(4)"><span class="tn">Section 4</span><span class="tla">The coaching plan and success indicators</span></button>
 <button class="tb" onclick="go(5)"><span class="tn">Section 5</span><span class="tla">Supporting arguments, evidence and reference</span></button>
+</div>
+<div class="dl-bar">
+<p class="dl-lbl">Download the full documents</p>
+<div class="dl-grid">
+<a href="./digital-skills-framework.docx" class="dl-btn" download aria-label="Download Digital Skills Framework Word document">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+<span class="dl-meta"><span class="dl-title">Digital Skills Framework</span><span class="dl-sub">Word document · All 30 areas · 8 sections</span></span>
+</a>
+<a href="./learning-without-barriers.docx" class="dl-btn" download aria-label="Download Learning Without Barriers Word document">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+<span class="dl-meta"><span class="dl-title">Learning Without Barriers</span><span class="dl-sub">Word document · Digital inclusion strategy</span></span>
+</a>
+</div>
 </div>
 </div></div>
 <!-- PAGE 1: PROPOSALS -->
@@ -194,6 +223,11 @@ tbody td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--rule
 <div class="page" id="p2">
 <div class="ph tl2"><p class="pe">Section 2 · The Digital Skills Framework</p><h1 class="pt">The DSF — <em>eight sections, one shared language</em></h1><p class="pi">The Digital Skills Framework is the reference document I bring to every Head of Area meeting. Each tab below is a section of the full framework. The curriculum area mapping in Tab 3 is proposed — it will be refined through HoA conversations over the coming months.</p></div>
 <div class="pb">
+<div class="dl-inline">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A7EA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+<div class="dl-inline-text"><strong>Digital Skills Framework — full Word document</strong>All 8 sections, all 30 curriculum area mappings, progression ladders, and teacher digital skills framework. Open or download below.</div>
+<a href="./digital-skills-framework.docx" class="dl-link" download aria-label="Download Digital Skills Framework Word document">&#8595; Download DSF</a>
+</div>
 <div class="co"><p class="co-t">How I use this in practice</p><p>Before every HoA meeting I open Tab 3 and find their area. I use what is there as a conversation opener rather than an audit. The question I am asking is: does any of this already happen in your area? If so, where, and is it being named and evidenced as digital skills development? If not, is it something that should be, and what would it take? The answers to those questions are what improve the framework over time.</p></div>
 <div class="tabs" role="tablist" aria-label="Digital Skills Framework sections">
 <button class="tab on" role="tab" aria-selected="true" onclick="dst(1,this)">1. Top 10 Skills</button>
@@ -396,6 +430,11 @@ tbody td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--rule
 <div class="page" id="p3">
 <div class="ph gr"><p class="pe">Section 3 · Learning Without Barriers</p><h1 class="pt">A digital inclusion proposal <em>built on solid foundations</em></h1><p class="pi">Learning Without Barriers is my proposal for how we approach digital inclusion across the college. It is built on three interconnected pillars and grounded in UDL principles, Quality First Teaching, and WCAG 2.2 AA accessibility standards. This is a consultation document — for discussion and challenge.</p></div>
 <div class="pb">
+<div class="dl-inline g">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+<div class="dl-inline-text"><strong>Learning Without Barriers — full Word document</strong>The complete digital inclusion strategy: five principles, three pillars, free tool guidance, WCAG 2.2 AA requirements, and specific provision for FIP, ESOL, and SEND learners.</div>
+<a href="./learning-without-barriers.docx" class="dl-link g" download aria-label="Download Learning Without Barriers Word document">&#8595; Download LWB</a>
+</div>
 <p class="lead">The Post-16 Education and Skills White Paper from November 2025 makes digital assumptions about learners, staff, and infrastructure that do not reflect the reality for a significant proportion of our cohort. Learners in coastal and rural areas around Weston-super-Mare face connectivity gaps. Many ESOL and SEND learners face device poverty. Staff confidence with digital tools varies considerably across the college. Learning Without Barriers is my response to that gap between assumption and reality.</p>
 <div class="co"><p class="co-t">The vision I am working towards</p><p>Every learner and member of staff at Weston College can access, engage with, and benefit from digital learning — regardless of their ability, language, background, connectivity, or prior experience. That is the standard I am proposing we set. It is ambitious. It is also achievable, because most of the tools we need to get there are already available to us.</p></div>
 <h2>The Five Strategic Principles</h2>
