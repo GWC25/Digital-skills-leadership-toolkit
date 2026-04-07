@@ -65,7 +65,7 @@ nav{background:var(--navy);border-bottom:3px solid var(--teal);max-width:100%;ma
 .cpl.f{background:rgba(10,126,164,.32);border-left:4px solid #4FC3F7}
 .cpl.i{background:rgba(6,95,70,.32);border-left:4px solid #34D399}
 .cpl.n{background:rgba(91,33,182,.32);border-left:4px solid #A78BFA}
-.cpl-badge{font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;border-radius:3px;flex-shrink:0;width:80px;text-align:center}
+.cpl-badge{font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;border-radius:3px;flex-shrink:0;min-width:72px;width:auto;text-align:center;white-space:nowrap}
 .cpl.f .cpl-badge{background:rgba(79,195,247,.25);color:#4FC3F7}
 .cpl.i .cpl-badge{background:rgba(52,211,153,.25);color:#34D399}
 .cpl.n .cpl-badge{background:rgba(167,139,250,.25);color:#A78BFA}
@@ -1830,7 +1830,7 @@ function saveJSON() {
   if (fs) fs.textContent = filename;
   if (ls) ls.textContent = 'Last saved: ' + timeStr + ' — save to OneDrive';
   const css = document.getElementById('cover-save-status');
-  if (css) { css.style.display='block'; css.textContent = '✓ Saved: ' + filename; }
+  if (css) { css.style.display='block'; css.style.color='#4FC3F7'; css.textContent = '✓ Saved: ' + filename + ' (includes link cards)'; }
   markClean();
   renderChangeLog();
 }
@@ -1846,12 +1846,19 @@ function loadJSON(input) {
       if (loaded.freetext) state.freetext = loaded.freetext;
       if (loaded.changeLog) state.changeLog = loaded.changeLog;
       if (loaded.meta) state.meta = { ...state.meta, ...loaded.meta };
-      if (loaded.coverLinks) state.coverLinks = loaded.coverLinks;
+      if (loaded.coverLinks && loaded.coverLinks.length > 0) {
+        state.coverLinks = loaded.coverLinks;
+      }
       currentFileName = file.name;
       const fs = document.getElementById('file-status');
       const ls = document.getElementById('last-saved');
-      if (fs) fs.textContent = file.name + ' — loaded';
-      if (ls) ls.textContent = loaded.meta && loaded.meta.lastModified ? 'Last saved: ' + loaded.meta.lastModified : '';
+      const hadLinks = loaded.coverLinks && loaded.coverLinks.length > 0;
+      if (fs) fs.textContent = file.name + ' — loaded ✓';
+      if (ls) {
+        const savedTime = loaded.meta && loaded.meta.lastModified ? 'Last saved: ' + loaded.meta.lastModified : '';
+        const linkNote = hadLinks ? '' : ' · Link cards: use defaults (re-add and save to persist)';
+        ls.textContent = savedTime + linkNote;
+      }
       buildUI();
       renderCoverLinks();
       markClean();
